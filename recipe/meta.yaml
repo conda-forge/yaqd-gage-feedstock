@@ -1,5 +1,5 @@
 {% set name = "yaqd-gage" %}
-{% set version = "2021.3.0" %}
+{% set version = "2022.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/yaqd-gage-{{ version }}.tar.gz
-  sha256: 3db8ee2c9a4efd8e1c26013a560a30497315cb18d9581a91cee181d3fa96ff1b
+  sha256: 7351e0959578bca6618b8437f9235fb2349c38930f78fef5a9f0685db5a01db5
 
 build:
   number: 0
