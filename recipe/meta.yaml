@@ -15,6 +15,7 @@ build:
   noarch: python
   entry_points:
     - yaqd-gage-compuscope = yaqd_gage._compuscope:CompuScope.main
+    - yaqd-gage-chopping = yaqd_gage._chopping:CompuScope.main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -34,6 +35,7 @@ test:
   commands:
     - pip check
     - yaqd-gage-compuscope --help
+    - yaqd-gage-chopping --help
   requires:
     - pip
 
