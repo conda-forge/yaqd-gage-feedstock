@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/yaqd-gage-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/yaqd-gage-{{ version }}.tar.gz
   sha256: 2d28cc4b83210dfa3a1f6ffbbd90e71c08baf9e65d3453adb6ce9e6ef1e6bba4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - yaqd-gage-compuscope = yaqd_gage._compuscope:CompuScope.main
@@ -20,12 +20,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - yaqd-core >=2020.06.3
     - pip
     - flit
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - yaqd-core >=2020.06.3
     - numpy
     - qtypes
@@ -41,6 +41,7 @@ test:
     - yaqd-gage-chopping --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://yaq.fyi
