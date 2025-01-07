@@ -16,7 +16,7 @@ build:
   entry_points:
     - yaqd-gage-compuscope = yaqd_gage._compuscope:CompuScope.main
     - yaqd-gage-chopping = yaqd_gage._chopping:CompuScope.main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
