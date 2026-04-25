@@ -1,5 +1,5 @@
 {% set name = "yaqd-gage" %}
-{% set version = "2022.7.0" %}
+{% set version = "2026.1.0" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/yaqd-gage-{{ version }}.tar.gz
-  sha256: 2d28cc4b83210dfa3a1f6ffbbd90e71c08baf9e65d3453adb6ce9e6ef1e6bba4
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 018bc346d9bd0116601296e69c81eeda1f6eca76192033cc75efa674994fa1f9
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - yaqd-gage-compuscope = yaqd_gage._compuscope:CompuScope.main
